@@ -17,7 +17,6 @@ The bucket of languages includes:
 - LaTeX
 - PHP
 - Bash
-- Ruby
 - Mathematica
 - Haskell
 - C#
