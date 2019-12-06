@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.*;
 
-public class Orbits {
+class Orbits {
     public static void main(String[] args) throws FileNotFoundException {
         Diagram d = new Diagram(new Scanner(new File("/Users/stygg/Documents/advent2019/data/day6.txt")));
-        System.out.println(d.countOrbits());
+        System.out.println(d.findSantaDistance());
     }
 }
 
@@ -66,14 +66,41 @@ class Diagram {
     }
 
     public int findSantaDistance() {
-
+        return findDistance("YOU", "SAN");
     }
 
     private int findDistance(String name1, String name2) {
+        int count = 0;
+        SpaceObject start = getObject(name1);
+        SpaceObject end = getObject(name2);
+        if (start == null || end == null) {
+            return -1;
+        }
+        List<String> orbitChain = new ArrayList<>();
+        SpaceObject current = start.getOrbiting();
+        while (current != null) {
+            orbitChain.add(current.getName());
+            current = current.getOrbiting();
+        }
 
+        List<String> orbitChain2 = new ArrayList<>();
+        current = end.getOrbiting();
+        while (current != null) {
+            orbitChain2.add(current.getName());
+            current = current.getOrbiting();
+        }
+
+        for (String source1 : orbitChain) {
+            for (String source2 : orbitChain2) {
+                if (source1.equals(source2)) {
+                    count = orbitChain.indexOf(source1) + orbitChain2.indexOf(source2);
+                    return count;
+                }
+            }
+        }
+
+        return -1;
     }
-
-
 }
 
 /**
