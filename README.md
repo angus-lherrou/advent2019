@@ -7,7 +7,6 @@ Each day in a different language! Inspired by [9999years].
 The bucket of languages includes:
 
 - Perl
-- Java
 - C
 - C++
 - TypeScript
@@ -44,6 +43,7 @@ Languages used so far:
 - Scala
 - Python
 - Ruby
+- Java
 
 
 
