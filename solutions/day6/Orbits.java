@@ -65,9 +65,15 @@ class Diagram {
         }
     }
 
-    public int countSomeOrbits() {
-        return objects.get(objects.size()-1).countComDistance();
+    public int findSantaDistance() {
+
     }
+
+    private int findDistance(String name1, String name2) {
+
+    }
+
+
 }
 
 /**
