@@ -9,7 +9,6 @@ The bucket of languages includes:
 - Ruby
 - Perl
 - Java
-- Python
 - C
 - C++
 - TypeScript
@@ -44,6 +43,7 @@ The bucket of languages includes:
 
 Languages used so far:
 - Scala
+- Python
 
 
 
