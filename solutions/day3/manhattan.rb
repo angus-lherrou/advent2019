@@ -63,13 +63,11 @@ def find_closest_intersection(wire1, wire2)
   lines2 = wire2.get_path
   lines1.each do |line1|
     lines2.each do |line2|
-      # puts [line1, line2].inspect
       if find_intersection(line1, line2)
         matches[matches.length] = find_intersection(line1, line2)
       end
     end
   end
-  puts matches.inspect
   if matches.length > 0
     distance = manhattan(matches[0])
     matches.each do |match|
