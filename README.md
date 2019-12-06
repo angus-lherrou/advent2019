@@ -26,7 +26,6 @@ The bucket of languages includes:
 - Lua
 - Idris
 - Coq
-- Scala
 - Ada
 - Agda
 - Erlang
@@ -44,6 +43,7 @@ The bucket of languages includes:
 - Befunge
 
 Languages used so far:
+- Scala
 
 
 
